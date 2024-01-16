@@ -1,8 +1,7 @@
-# React + Vite
+This is my degree project for the course "Blockchain Development" at Medieinstitutet in Sweden.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The site aims to simulate some of the most popular use cases in crypto at a very elementary level.
 
-Currently, two official plugins are available:
+The target group is mainly users with little to no experience with web3 websites.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To use this website you need a metamask wallet, be connected to the sepolia testnet, have sepoliaETH in your wallet and import the native token XPLRCOIN at address: 0xF0e01BAbCd26Be4A6eaC43d823E26396ee34A118
