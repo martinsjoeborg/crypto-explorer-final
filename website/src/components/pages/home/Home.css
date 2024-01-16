@@ -7,15 +7,6 @@ font-family:'reg' ;
 src: url('../../../assets/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
 }
 
-/* .drop {
-    position: absolute;
-    bottom: 100%;
-    width: 2px;
-    height: 75px;
-    background-color: orange;
-    border-radius: 50%;
- } */
-
 .home-container {
     height: 100vh;
     background-color: rgb(111, 111, 111);
@@ -39,7 +30,6 @@ src: url('../../../assets/fonts/oxygen/Oxygen-Regular.ttf') format('truetype');
     letter-spacing: 3px;
    font-size: 1rem;
    font-family: "bold";
-   /* background-color: grey; */
 }
 .home-guide-text {
     margin-top: 50px;

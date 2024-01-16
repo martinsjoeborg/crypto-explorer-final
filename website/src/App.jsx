@@ -14,7 +14,6 @@ import NftMain from "./components/pages/nft/NftMain.jsx";
 function App() {
 
   const [currentAccount, setCurrentAccount] = useState(null);
-  // const location = useLocation();
 
   return (
       <BrowserRouter>
@@ -24,7 +23,6 @@ function App() {
             <NavLink to="/defi" className={({ isActive }) => (isActive ? "isActive" : "defi")}>DeFi</NavLink>
             <NavLink to="/dao" className={({ isActive }) => (isActive ? "isActive" : "dao")}>DAO</NavLink>
             <NavLink to="/nft" className={({ isActive }) => (isActive ? "isActive" : "nft")}>NFT</NavLink>
-            {/* <NavLink to="/about" className={({ isActive }) => (isActive ? "isActive" : "about")}>About</NavLink> */}
           </nav>
           <ConnectWallet currentAccount={currentAccount} setCurrentAccount={setCurrentAccount} />
         </div>
@@ -38,8 +36,7 @@ function App() {
           <Route path="/defi/borrow-lend" element={<BorrowLendMain currentAccount={currentAccount}/>} />
           <Route path="/dao" element={<DaoMain />} />
           <Route path="/nft" element={<NftMain />} />
-          
-          {/* ... other routes */}
+
         </Routes>
       </BrowserRouter>
   )

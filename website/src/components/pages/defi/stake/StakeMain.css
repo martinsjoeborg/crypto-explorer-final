@@ -43,10 +43,7 @@
     display: flex;
     justify-content: center;
     gap: 100px;
-    
-    
     position: relative;
-
 }
 .stake {
     display: flex;
@@ -82,7 +79,6 @@
 .amountStaked .getValue .staked-btn{
     margin-top: 0;
 }
-
 .stake-form h4 {
     letter-spacing: 2px;
     padding-top: 30px;
@@ -115,7 +111,6 @@
     align-items: center;
 }
 .stake-form button {
-    /* margin-top: 10px; */
     font-size: .8rem;
     height: 30px;
     width: 120px;
@@ -133,10 +128,8 @@
     color: rgb(255, 115, 0);
     transform: scale3d(1.1, 1.1, 1);
 }
-
 .stake-guide-text {
     width: 30%;
-
 }
 .stake-guide-text p {
     letter-spacing: 1px;

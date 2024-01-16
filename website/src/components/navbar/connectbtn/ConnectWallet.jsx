@@ -1,9 +1,6 @@
-// import { useState } from "react";
 import "./ConnectWallet.css"
 
 const ConnectWallet = ({currentAccount, setCurrentAccount}) => {
-
-    // const [currentAccount, setCurrentAccount] = useState(null);
 
     async function connect() {
         if (window.ethereum) {
@@ -20,7 +17,6 @@ const ConnectWallet = ({currentAccount, setCurrentAccount}) => {
     }
     
     window.ethereum.on('accountsChanged', (accounts) => {
-        // Handle the new accounts, or reload the page
         setCurrentAccount(accounts[0]);
       });
       

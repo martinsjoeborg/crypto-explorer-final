@@ -10,15 +10,12 @@
     transition: all 0.3s;
     letter-spacing: 2px;
 }
-
 .connectBtn:hover {
     cursor: pointer;
     border-color: rgb(255, 115, 0);
     color: rgb(255, 115, 0);
     transform: scale3d(1.1, 1.1, 1);
 }
-
-
 .accountAddress {
     color: rgb(255, 115, 0);
     letter-spacing: 2px;

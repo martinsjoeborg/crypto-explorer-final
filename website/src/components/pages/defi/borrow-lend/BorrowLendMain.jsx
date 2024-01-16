@@ -15,14 +15,12 @@ const BorrowLendMain = ({currentAccount}) => {
 
     const handleCollateral = (e) => {
         e.preventDefault();
-
         depositCollateral(collateralAmount, currentAccount);
         setCollateralAmount("");
     }
 
     const handleBorrow = (e) => {
         e.preventDefault();
-
         borrow(borrowAmount, currentAccount);
         setBorrowAmount("");
     }
@@ -39,33 +37,28 @@ const BorrowLendMain = ({currentAccount}) => {
 
     const handleApproveRepay = (e) => {
         e.preventDefault();
-
         approveBorrowLend("0x84F097F0C6b94F3D2D6b01b1A2Ade9930C115988", approveRepayAmount, currentAccount);
     }
 
     const handleRepay = (e) => {
         e.preventDefault();
-
         repay(currentAccount);
         setApproveRepayAmount("");
     }
 
     const handleApproveDeposit = (e) => {
         e.preventDefault();
-
         approveBorrowLend("0x84F097F0C6b94F3D2D6b01b1A2Ade9930C115988", depositAmount, currentAccount);
     }
 
     const handleDeposit = (e) => {
         e.preventDefault();
-
         deposit(depositAmount, lockDuration, currentAccount);
         setDepositAmount("");
     }
 
     const handleWithdraw = (e) => {
         e.preventDefault();
-
         withdraw(currentAccount);
     }
 
@@ -109,8 +102,7 @@ const BorrowLendMain = ({currentAccount}) => {
                             <label>
                                 <input
                                     placeholder="Collateral amount"
-                                    // type="number"
-                                    step="any" // Allows decimal input
+                                    step="any"
                                     value={collateralAmount}
                                     onChange={(e) => setCollateralAmount(e.target.value)}
                                 />
@@ -130,8 +122,7 @@ const BorrowLendMain = ({currentAccount}) => {
                             <label>
                                 <input
                                     placeholder="Borrow amount"
-                                    // type="number"
-                                    step="any" // Allows decimal input
+                                    step="any"
                                     value={borrowAmount}
                                     onChange={(e) => setBorrowAmount(e.target.value)}
                                 />
@@ -154,8 +145,7 @@ const BorrowLendMain = ({currentAccount}) => {
                             <label>
                                 <input
                                     placeholder="Repay amount"
-                                    // type="number"
-                                    step="any" // Allows decimal input
+                                    step="any"
                                     value={approveRepayAmount}
                                     onChange={(e) => setApproveRepayAmount(e.target.value)}
                                 />
@@ -176,8 +166,7 @@ const BorrowLendMain = ({currentAccount}) => {
                             <label >
                                 <input
                                     placeholder="Deposit amount"
-                                    // type="number"
-                                    step="any" // Allows decimal input
+                                    step="any"
                                     value={depositAmount}
                                     onChange={(e) => setDepositAmount(e.target.value)}
                                 />

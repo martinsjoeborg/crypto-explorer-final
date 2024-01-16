@@ -1,24 +1,11 @@
 import "./Home.css"
-// import video from "../../../assets/vids/";
-import { Rain } from 'react-rainfall';
 
 const Home = () => {
     return (
         
         <div className="home-container">
 
-            {/* <video src={video} autoPlay loop muted></video> */}
-            {/* <div style={{
-                position: 'absolute',
-                height: '600px',
-                width: '1000px',
-                color: "rgb(255, 115, 0)"
-            }}> 
-                <Rain />
-            </div> */}
-
             <div className="home-intro-text">
-                {/* <h1>Unlocking New Horizons - Your Portal to the Future of Finance</h1> */}
                 <h1>Crypto Explorer - Your Guide Through the Web3 Ecosystem.</h1>
                 <h3>Welcome to your new home for learning and testing some of the most popular use cases in crypto.
                     <br /><br />
@@ -50,6 +37,7 @@ const Home = () => {
                     <br /><br />
                     <a href="https://support.metamask.io/hc/en-us/articles/360015489031-How-to-display-tokens-in-MetaMask" target="blank">Import a token to your Metamask wallet</a>
                 </div>
+                <p>The address for the XPLRCOIN token is: 0xF0e01BAbCd26Be4A6eaC43d823E26396ee34A118</p>
                 <p>Start exploring by connecting your wallet in the top right corner.</p>
 
             </div>

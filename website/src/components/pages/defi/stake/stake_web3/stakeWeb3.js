@@ -10,7 +10,6 @@ export const stake = (value, currentAccount) => {
 
     contract.methods.stake(weiValue).send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -25,11 +24,8 @@ export const stake = (value, currentAccount) => {
   
 export const getReward = (currentAccount) => {
 
-    // const weiValue = web3.utils.toWei(value.toString(), 'ether');
-  
     contract.methods.getReward().send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -48,7 +44,6 @@ export const withdraw = (value, currentAccount) => {
   
     contract.methods.withdraw(weiValue).send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);

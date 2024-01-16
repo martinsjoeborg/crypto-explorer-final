@@ -8,7 +8,7 @@ export const swap = (swapAmount, currentAccount) => {
   
     contract.methods.swap().send({
         from: currentAccount,
-        value: web3.utils.toWei(swapAmount.toString(), 'ether') // Convert swapAmount to wei
+        value: web3.utils.toWei(swapAmount.toString(), 'ether')
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);

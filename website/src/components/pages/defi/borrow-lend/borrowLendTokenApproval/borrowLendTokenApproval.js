@@ -10,7 +10,6 @@ export const approveBorrowLend = (spender, value, currentAccount) => {
   
     contract.methods.approve(spender, weiValue).send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);

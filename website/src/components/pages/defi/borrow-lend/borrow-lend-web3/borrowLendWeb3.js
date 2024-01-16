@@ -8,7 +8,7 @@ export const depositCollateral = (collateralAmount, currentAccount) => {
   
     contract.methods.depositCollateral().send({
         from: currentAccount,
-        value: web3.utils.toWei(collateralAmount.toString(), 'ether') // Convert swapAmount to wei
+        value: web3.utils.toWei(collateralAmount.toString(), 'ether')
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -27,7 +27,6 @@ export const borrow = (borrowAmount, currentAccount) => {
 
     contract.methods.borrow(weiValue).send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -54,11 +53,8 @@ export const getRepayAmount = (currentAccount) => {
 
 export const repay = (currentAccount) => {
 
-    // const weiValue = web3.utils.toWei(value.toString(), 'ether');
-  
     contract.methods.repay().send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -77,7 +73,6 @@ export const deposit = (amount, lockDuration, currentAccount) => {
   
     contract.methods.deposit(weiValue, lockDuration).send({
         from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);
@@ -92,11 +87,8 @@ export const deposit = (amount, lockDuration, currentAccount) => {
 
 export const withdraw = (currentAccount) => {
 
-    // const weiValue = web3.utils.toWei(value.toString(), 'ether');
-  
     contract.methods.withdraw().send({
-        from: currentAccount
-        // value: web3.utils.toWei(stakeAmount.toString(), 'ether') 
+        from: currentAccount 
     })
     .on('transactionHash', hash => {
         console.log('Transaction Hash:', hash);

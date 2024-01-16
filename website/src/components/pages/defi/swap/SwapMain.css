@@ -5,18 +5,13 @@
 
 * {
     color: white;
-    /* margin: 0;
-    padding: 0;
-    box-sizing: border-box; */
 }
-
 .swap-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 85%;
 }
-
 .swap-top-text {
     display: flex;
     flex-direction: column;
@@ -25,28 +20,23 @@
     height: 45%;
     gap: 20px;
 }
-
-
 .swap-top-text h3 {
     font-size: 1.7rem;
     letter-spacing: 3px;
     color: rgb(255, 115, 0);
 }
-
 .swap-top-text p {
     font-size: 1.2rem;
     letter-spacing: 2px;
     width: 50%;
     text-align: center;
 }
-
 .swap-interface {
     height: 55%;
     display: flex;
     justify-content: center;
     gap: 80px;
 }
-
 .swap-form {
     width: 30%;
     background-color: rgb(57, 57, 57);
@@ -55,18 +45,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Add relative positioning to the form */
+    position: relative;
 }
-
 .swap-form h4 {
     letter-spacing: 2px;
     padding-top: 30px;
 }
-
 .swap-form .convert-text {
     padding-top: 30px;
 }
-
 .swap-form form {
     padding-top: 30px;
     display: flex;
@@ -74,7 +61,6 @@
     width: 100%;
     align-items: center;
 }
-
 .swap-form .input-field {
     background-color: rgba(255, 255, 255, 0.299);
     border-color: transparent;
@@ -87,18 +73,13 @@
     font-family: "bold";
     letter-spacing: 2px;
 }
-
 .swap-form .input-field::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
-
-/* Style for the "sepoliaETH-to-XPLRCOIN" section */
 .sepoliaETH-to-XPLRCOIN {
-    margin-top: 10px; /* Adjust the margin as needed */
+    margin-top: 10px; 
     height: 20px;
 }
-
-/* Style for the submit button */
 .swap-form button {
     margin-top: 40px;
     font-size: 1.1rem;
@@ -118,7 +99,6 @@
     color: rgb(255, 115, 0);
     transform: scale3d(1.1, 1.1, 1);
 }
-
 .swap-guide-text {
     width: 30%;
 
@@ -127,7 +107,6 @@
     letter-spacing: 1px;
     line-height: 25px;
 }
-
 .swap-guide-text p a {
     color: rgb(255, 115, 0);
     font-family: "bold";
