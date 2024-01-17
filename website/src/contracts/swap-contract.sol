@@ -8,7 +8,7 @@ interface IERC20 {
 
 contract SepoliaETHToERC20Swap {
     IERC20 public erc20Token;
-    uint256 public rate; // Number of tokens per 1 ETH
+    uint256 public rate;
 
     constructor(address _erc20Token, uint256 _rate) {
         erc20Token = IERC20(_erc20Token);
@@ -22,12 +22,10 @@ contract SepoliaETHToERC20Swap {
         erc20Token.transfer(msg.sender, tokenAmount);
     }
 
-    // Function to withdraw ETH in case of emergency
     function withdrawETH() external {
         payable(msg.sender).transfer(address(this).balance);
     }
 
-    // Function to withdraw ERC20 tokens from the contract
     function withdrawERC20() external {
         erc20Token.transfer(msg.sender, erc20Token.balanceOf(address(this)));
     }

@@ -9,9 +9,9 @@ interface IERC20 {
 
 contract LendingBorrowing {
     IERC20 public token;
-    uint256 public constant COLLATERAL_RATIO = 75; // 75% of collateral value
-    uint256 public constant SEPOLIA_ETH_TO_ERC20_RATIO = 10000; // 1 sepoliaETH = 10,000 ERC20 tokens
-    uint256 public constant INTEREST_RATE_PER_SECOND = 1000000000000000; // 0.001 of the token borrowed each second
+    uint256 public constant COLLATERAL_RATIO = 75;
+    uint256 public constant SEPOLIA_ETH_TO_ERC20_RATIO = 10000;
+    uint256 public constant INTEREST_RATE_PER_SECOND = 1000000000000000;
 
     struct Deposit {
         uint256 amount;
@@ -35,7 +35,7 @@ contract LendingBorrowing {
     function getCurrentRepaymentAmount() external view returns (uint256) {
         Borrow storage userBorrow = borrows[msg.sender];
         if (userBorrow.amount == 0) {
-            return 0; // If the user has not borrowed anything, return 0
+            return 0;
         }
         uint256 timeElapsed = block.timestamp - userBorrow.startTime;
         uint256 interest = calculateInterest(userBorrow.amount, timeElapsed);
@@ -82,7 +82,7 @@ contract LendingBorrowing {
         require(userBalance >= totalRepayAmount, "You do not have enough in your wallet to repay the loan.");
 
         token.transferFrom(msg.sender, address(this), totalRepayAmount);
-        payable(msg.sender).transfer(userBorrow.collateral); // Refunding collateral in sepoliaETH
+        payable(msg.sender).transfer(userBorrow.collateral);
         delete borrows[msg.sender];
     }
 
